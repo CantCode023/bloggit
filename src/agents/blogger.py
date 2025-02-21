@@ -1,5 +1,6 @@
-from autogen_core.models import UserMessage
 from autogen_ext.models.openai import OpenAIChatCompletionClient
+from autogen_agentchat.agents import AssistantAgent 
+
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -14,4 +15,12 @@ model_client = OpenAIChatCompletionClient(
         "json_output": False,
         "family": "unknown"
     }
+)
+
+agent = AssistantAgent(
+    name="blogger_agent",
+    model_client=model_client,
+    tools=[],
+    reflect_on_tool_use=True,
+    system_message="Based on the github repository contents, generate a blog about the project.",
 )
