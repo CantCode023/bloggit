@@ -1,11 +1,21 @@
 from src.agents.blogger import run
-
+import streamlit as st
 import asyncio
 import nest_asyncio
 nest_asyncio.apply()
 
-async def main():
-    await run("Generate a blog about my github repository, https://github.com/CantCode023/evoke")
-    
-if __name__ == "__main__":
-    asyncio.run(main())
+async def generate_blog(prompt, style):
+    return await run(prompt, style)
+
+st.title("bloggit")
+
+user_input = st.text_input("Enter your GitHub repository URL")
+style = st.radio("Choose writing style:", ("Creative", "Logical"), horizontal=True)
+generate_button = st.button("Blog it!")
+
+if generate_button and user_input:
+    chosen_style = style.lower()
+    with st.spinner(f"Generating {chosen_style} blog..."):
+        blog_content = asyncio.run(generate_blog(user_input, chosen_style))
+        print(blog_content)
+        st.markdown(blog_content)
