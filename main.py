@@ -8,10 +8,12 @@ async def generate_blog(prompt, style):
     return await run(prompt, style)
 
 st.title("bloggit")
+st.write("Made with ❤️ by [@CantCode023](https://github.com/CantCode023)")
+st.markdown("---")
 
 user_input = st.text_input("Enter your GitHub repository URL")
 style = st.radio("Choose writing style:", ("Creative", "Logical"), horizontal=True)
-generate_button = st.button("Blog it!")
+generate_button = st.button("🚀 Blog it!")
 
 if generate_button and user_input:
     chosen_style = style.lower()
