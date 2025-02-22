@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-async def image_generation(prompt:str):
+def image_generation(prompt:str):
     client = Together(api_key=os.environ["TOGETHER_API_KEY"])
     response = client.images.generate(
         prompt=prompt,
@@ -11,4 +11,5 @@ async def image_generation(prompt:str):
         steps=4,
         n=1
     )
-    return response.data[0].url
+    if response and response.data:
+        return response.data[0].url
