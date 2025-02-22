@@ -8,7 +8,7 @@ async def generate_blog(prompt, style):
     return await run(prompt, style)
 
 st.title("bloggit")
-st.write("Made with ❤️ by [@CantCode023](https://github.com/CantCode023)")
+st.write("Made with ❤️ by [@bd.](https://github.com/CantCode023)")
 st.markdown("---")
 
 user_input = st.text_input("Enter your GitHub repository URL")
