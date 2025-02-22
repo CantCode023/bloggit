@@ -18,6 +18,7 @@ async def generate_blog(prompt, style):
             blog_placeholder.markdown(full_content)
             await asyncio.sleep(0.01)
     
+    blog_placeholder.empty()
     return full_content
 
 st.title("bloggit")
@@ -30,4 +31,5 @@ generate_button = st.button("🚀 Blog it!")
 
 if generate_button and user_input:
     chosen_style = style.lower()
-    asyncio.run(generate_blog(user_input, chosen_style))
+    blog_content = asyncio.run(generate_blog(user_input, chosen_style))
+    st.markdown(blog_content)
