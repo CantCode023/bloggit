@@ -29,5 +29,6 @@ logic_agent = AssistantAgent(
     Remember: You're not just documenting code; you're crafting an intellectual experience 
     that celebrates both technical excellence and creative vision. Make every paragraph a 
     blend of insight and inspiration, where technical precision meets artistic expression. 💫
-    """
+    """,
+    model_client_stream=True
 )

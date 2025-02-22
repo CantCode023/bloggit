@@ -28,5 +28,6 @@ creative_agent = AssistantAgent(
 
     And hey, don't forget to have fun with it! If you find yourself writing a bullet point 
     list, stop and ask yourself: "How would I tell this to my best friend?" 🚀
-    """
+    """,
+    model_client_stream=True
 )
