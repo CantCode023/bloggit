@@ -5,6 +5,9 @@ Turn your GitHub repos into awesome blog posts with AI magic! ✨
 > [!NOTE]
 > Check it out at [bloggit.streamlit.app!](https://bloggit.streamlit.app)
 
+## 📷 Video walkthrough
+[![Watch the video walkthrough](https://img.youtube.com/vi/h6jdVeV2oBM/maxresdefault.jpg)](https://youtu.be/h6jdVeV2oBM)
+
 ## 🎯 What is Bloggit?
 
 Bloggit is your AI-powered writing buddy that transforms GitHub repositories into engaging blog posts! Whether you want a creative, story-like narrative or a logical, technical deep-dive, Bloggit has got you covered! 🎨
