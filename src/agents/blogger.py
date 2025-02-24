@@ -24,9 +24,9 @@ async def run_tools(url: str):
         cancellation_token=CancellationToken(),
     )
     image_prompt = image_response.chat_message.content
-    image_url=""
+    image_url = ""
     if isinstance(image_prompt, str):
-        image_url = image_generation(image_prompt)
+        image_url = await image_generation(image_prompt)
     image_markdown = f"![Image]({image_url})"
 
     return image_markdown, repo_contents

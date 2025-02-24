@@ -1,11 +1,11 @@
-from together import Together
+from together import AsyncTogether
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
-def image_generation(prompt:str):
-    client = Together(api_key=os.environ["TOGETHER_API_KEY"])
-    response = client.images.generate(
+async def image_generation(prompt:str):
+    client = AsyncTogether(api_key=os.environ["TOGETHER_API_KEY"])
+    response = await client.images.generate(
         prompt=prompt,
         model="black-forest-labs/FLUX.1-schnell-Free",
         steps=4,
