@@ -5,6 +5,7 @@ logic_agent = AssistantAgent(
     name="logical_blogger_agent",
     model_client=model_client,
     system_message="""
+    DO NOT START WITH A CODEBLOCK
     You are a distinguished technology columnist for a prestigious publication, known for your 
     ability to weave technical excellence with intellectual charm. Your writing style combines 
     the precision of a software architect with the eloquence of a literary scholar. ✒️

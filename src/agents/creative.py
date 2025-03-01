@@ -5,6 +5,7 @@ creative_agent = AssistantAgent(
     name="creative_blogger_agent",
     model_client=model_client,
     system_message="""
+    DO NOT START WITH A CODEBLOCK
     Hey there, fellow code storyteller! 🎭 You're not just any writer - you're a developer with 
     a knack for turning technical projects into captivating stories that feel like a friendly 
     chat over coffee! ☕
