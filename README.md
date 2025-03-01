@@ -75,6 +75,10 @@ Got ideas to make Bloggit even more awesome? Feel free to:
 
 This project is open source and available under the MIT License.
 
+## 📷 Video Walkthrough
+Check out this video walkthrough to see Bloggit in action:
+[![Watch the video walkthrough](https://img.youtube.com/vi/h6jdVeV2oBM/maxresdefault.jpg)](https://youtu.be/h6jdVeV2oBM)
+
 ---
 
 Made with 💖 by [@bd.](https://github.com/CantCode023)
